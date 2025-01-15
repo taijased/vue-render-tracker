@@ -1,15 +1,22 @@
 {
     "compilerOptions": {
-        "target": "ES6",
+        "target": "ESNext",
         "module": "ESNext",
-        "outDir": "./dist",
-        "declaration": true,
-        "declarationDir": "./dist/types",
-        "strict": true,
         "moduleResolution": "Node",
-        "esModuleInterop": true,
-        "skipLibCheck": true
+        "declaration": true,
+        "outDir": "dist",
+        "rootDir": "src",
+        "strict": true,
+        "jsx": "preserve",
+        "useDefineForClassFields": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "composite": true,
+        "lib": ["ESNext", "DOM"],
+        "paths": {
+            "@/*": ["./src/*"]
+        }
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "typings.d.ts", "auto-imports.d.ts"],
     "exclude": ["node_modules", "dist"]
 }
