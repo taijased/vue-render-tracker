@@ -1,21 +1,25 @@
+import {createApp} from "vue";
 import {VueScanPlugin} from "./VueScanPlugin";
-
 export {VueScanPlugin};
 
-// Автоматическая регистрация для глобальной версии
 if (typeof window !== "undefined" && (window as any).Vue) {
-    const VueScan = new VueScanPlugin({
-        enabled: true,
-        showOverlay: true,
-        log: false,
-        playSound: false,
-    });
+    const appElement = document.getElementById("app");
+    if (appElement) {
+        const app = createApp({});
+        const vueScan = new VueScanPlugin({
+            enabled: true,
+            showOverlay: true,
+            log: false,
+            playSound: false,
+        });
 
-    (window as any).Vue.use(VueScan);
+        app.use(vueScan);
+        app.mount("#app");
 
-    const app = (window as any).Vue.createApp({});
-    app.mount("#app");
-    VueScan.start();
+        vueScan.start();
 
-    (window as any).VueRenderTracker = VueScan; // Экспорт глобального объекта
+        (window as any).VueRenderTracker = vueScan;
+    } else {
+        console.error("No element with ID 'app' found for mounting Vue.");
+    }
 }
