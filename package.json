@@ -1,6 +1,6 @@
 {
   "name": "@taijased/vue-render-tracker",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A Vue 3 library for tracking component renders.",
   "main": "dist/vue-render-tracker.umd.js",
   "module": "dist/vue-render-tracker.es.js",
