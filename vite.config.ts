@@ -6,8 +6,11 @@ export default defineConfig({
         lib: {
             entry: "src/index.ts",
             name: "VueRenderTracker",
-            fileName: (format) => `vue-render-tracker.${format}.js`,
-            formats: ["es", "umd"],
+            fileName: (format) =>
+                format === "iife"
+                    ? "auto.global.js"
+                    : `vue-render-tracker.${format}.js`,
+            formats: ["es", "umd", "iife"], // Добавляем iife
         },
         rollupOptions: {
             external: ["vue"],

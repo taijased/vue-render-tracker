@@ -15,7 +15,7 @@ import type { IVueScanOptions } from './types';
  */
 const defaultOptions: IVueScanOptions = {
 	enabled: true, // Enables or disables the plugin.
-	log: false, // Enables or disables logging.
+	log: true, // Enables or disables logging.
 	playSound: false, // Plays a sound on specific interactions if enabled.
 	showOverlay: false, // Displays an overlay for visual feedback if enabled.
 	trackUpdates: true // Tracks updates in the Vue application.
