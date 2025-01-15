@@ -1,0 +1,40 @@
+{
+  "name": "@taijased/vue-render-tracker",
+  "version": "1.0.1",
+  "description": "A Vue 3 library for tracking component renders.",
+  "main": "dist/vue-render-tracker.umd.js",
+  "module": "dist/vue-render-tracker.es.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.0.0"
+  },
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [
+    "vue",
+    "vue 3",
+    "tracker",
+    "render",
+    "render-tracker",
+    "typescript"
+  ],
+  "author": "Maxim Spiridonov",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taijased/vue-render-tracker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/taijased/vue-render-tracker/issues"
+  },
+  "homepage": "https://github.com/taijased/vue-render-tracker#readme",
+  "devDependencies": {
+    "vite": "^6.0.7",
+    "vite-plugin-dts": "^4.5.0",
+    "terser": "^5.17.0"
+  }
+}
