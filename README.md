@@ -2,6 +2,8 @@
 
 Vue Render Tracker is a Vue 3 library that helps developers track component renders in their applications. It provides an easy way to visualize and log rendering performance to help optimize your app.
 
+![Vue Render Tracker Demo](/src/assets/demo.gif)
+
 ## Installation
 
 Install the library using npm:
